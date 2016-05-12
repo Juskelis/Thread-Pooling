@@ -5,8 +5,8 @@ all: ThreadPool Example
 ThreadPool: ThreadPool.h ThreadPool.cpp
 	g++ $(CFLAGS) -c ThreadPool.cpp -o ThreadPool
 
-Example: main.cpp ThreadPool
-	g++ $(CFLAGS) main.cpp ThreadPool -o Example
+Example: example.cpp ThreadPool
+	g++ $(CFLAGS) example.cpp ThreadPool -o Example
 
 clean:
 	rm -f *.o
