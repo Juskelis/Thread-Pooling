@@ -1,4 +1,4 @@
-CFLAGS = -ansi -Wall -Werror -pedantic -std=c++11
+CFLAGS = -ansi -Wall -Werror -pedantic -std=c++11 -lpthread
 
 all: ThreadPool Example
 

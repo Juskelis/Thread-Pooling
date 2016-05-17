@@ -1,5 +1,6 @@
 #include "ThreadPool.h"
 #include <iostream>
+#include <thread>
 
 using namespace std;
 
@@ -20,6 +21,8 @@ int main()
 	for(int i = 0; i < NUMBER_OF_REQUESTS; i++)
 	{
 		myArgs* args = new myArgs;
+		args -> myMessage = "Hello";
+		args -> myNumber = i;
 		myPool.enqueue(threadPooledMethod, (void*)args);
 	}
 
